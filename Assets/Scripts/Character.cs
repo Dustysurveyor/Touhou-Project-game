@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
 {
-    private CharacterSettings _rootObject;
+    [SerializeField] private CharacterSettings rootObject;
     private Vector2 _moveInput;
 
     private void Update()

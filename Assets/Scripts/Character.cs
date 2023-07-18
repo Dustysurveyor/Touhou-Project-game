@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
     private void Update()
     {
         Vector2 diff = _moveInput * rootObject.Speed * Time.deltaTime;
-        rigidBody.MovePosition(diff);
+        rigidBody.MovePosition(rigidBody.position + diff);
     }
 
     private void OnMove(InputValue value)

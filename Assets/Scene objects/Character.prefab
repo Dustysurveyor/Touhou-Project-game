@@ -83,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  bulletTemplate: {fileID: 4876324318740704401, guid: ea9dc9fab43db47999ca7c6557356756, type: 3}
 --- !u!50 &5694054726837241821
 Rigidbody2D:
   serializedVersion: 4
@@ -91,7 +92,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232746677227014356}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -109,7 +110,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &3885782108452474355
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootObject: {fileID: 6683076149367804036}
+  rigidBody: {fileID: 5694054726837241821}
 --- !u!114 &9057849124715463499
 MonoBehaviour:
   m_ObjectHideFlags: 0

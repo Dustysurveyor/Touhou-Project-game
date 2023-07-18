@@ -1,7 +1,7 @@
 using UnityEngine;
-using InputSystem;
+using UnityEngine.InputSystem;
 
-public class Character
+public class Character : MonoBehaviour
 {
     private CharacterSettings _rootObject;
     private Vector2 _moveInput;

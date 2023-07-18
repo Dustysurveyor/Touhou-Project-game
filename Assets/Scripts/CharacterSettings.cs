@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterSettings : MonoBehavior
+public class CharacterSettings : MonoBehaviour
 {
     [SerializeField] private float speed;
 

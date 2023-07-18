@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     private void Update()
     {
         Vector2 diff = _moveInput * rootObject.Speed * Time.deltaTime;
-        rootObject.transform.position = (Vector3)diff;
+        rootObject.transform.position += (Vector3)diff;
     }
 
     private void OnMove(InputValue value)

@@ -9,7 +9,12 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        Vector2 diff = _moveInput * rootObject.Speed * Time.deltaTime;
+        
+    }
+
+    private void FixedUpdate()
+    {
+        Vector2 diff = _moveInput * rootObject.Speed * Time.fixedDeltaTime;
         rigidBody.MovePosition(rigidBody.position + diff);
     }
 

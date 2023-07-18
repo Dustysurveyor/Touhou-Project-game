@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        Vector2 diff = _moveInput * _rootObject.Speed;
+        Vector2 diff = _moveInput * rootObject.Speed;
         transform.position = (Vector3)diff;
     }
 

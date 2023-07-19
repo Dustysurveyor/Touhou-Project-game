@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
 	private void ResetObject(Vector2 position)
 	{
 		_fireTime = Time.time;
-		rigidBody.position = position;
+		rigidBody.gameObject.transform.position = position;
 	}
 
 	private static readonly Queue<BulletSettings> BulletQueue = new();

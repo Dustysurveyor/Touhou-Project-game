@@ -15,6 +15,7 @@ public class Character : MonoBehaviour
         if (!_fireInput.NearZero() && Time.time >= _fireTime)
         {
             Bullet.SpawnBullet(firePosition.position, rootObject.BulletTemplate.gameObject);
+            _fireTime = Time.time + rootObject.BulletTimer;
         }
     }
     

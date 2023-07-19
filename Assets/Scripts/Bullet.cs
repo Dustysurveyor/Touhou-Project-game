@@ -21,23 +21,20 @@ public class Bullet : MonoBehaviour
 		rigidBody.position = position;
 	}
 
-	private static readonly Queue<BulletSettings> _bulletQueue = new();
+	private static readonly Queue<BulletSettings> BulletQueue = new();
 	
-	public static BulletSettings SpawnBullet(Vector2 position, GameObject template)
+	public static void SpawnBullet(Vector2 position, GameObject template)
 	{
-		if (!_bulletQueue.TryDequeue(out var bullet))
-		{
+		if (!BulletQueue.TryDequeue(out var bullet))
 			bullet = Instantiate(template).GetComponent<BulletSettings>();
-		}
 
 		bullet.gameObject.SetActive(true);
 		bullet.BroadcastMessage("ResetObject", position);
-		return bullet;
 	}
 
 	private static void ReturnBullet(BulletSettings obj)
 	{
 		obj.gameObject.SetActive(false);
-		_bulletQueue.Enqueue(obj);
+		BulletQueue.Enqueue(obj);
 	}
 }

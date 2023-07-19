@@ -33,6 +33,12 @@ public static class Extensions
         return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
     }
 
+    public static float Vector2ToDegrees(this Vector2 v)
+    {
+        var n = v.normalized;
+        return Mathf.Atan2(n.y, n.x) * Mathf.Rad2Deg;
+    }
+
     public static Vector2 Random(this Vector2 v)
     {
         var randAngle = UnityEngine.Random.Range(-180, 180) * Mathf.Deg2Rad;

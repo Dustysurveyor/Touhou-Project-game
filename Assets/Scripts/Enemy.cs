@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _pos += Time.fixedDeltaTime.Lerp(0, _pathTime, 0, _pathDist);
+        _pos += Time.fixedDeltaTime.Lerp(0, _pathTime, 0, 1);
         if (_pos >= 1.0f) _pos -= 1.0f;
         rootObject.transform.position = path.Spline.EvaluatePosition(_pos);
     }
